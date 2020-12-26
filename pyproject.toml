@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "worklark"
+version = "0.0.1"
+description = "A job board."
+authors = ["Amin Shah Gilani <am<worklark@gilani.me>"]
+license = "AGPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.1.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
