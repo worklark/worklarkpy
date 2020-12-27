@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 from website.views import home
+from jobboard.views import detail, job_listings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home),
+    path("job_listings/<int:id>", detail),
+    path("job_listings", job_listings),
 ]

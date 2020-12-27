@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from jobboard.models import JobListing
 
 
 def home(request):
-    return HttpResponse("Welcome to WorkLark")
+    return render(
+        request,
+        "website/home.html",
+        {"message": "Hello!", "job_listing_count": JobListing.objects.count()},
+    )
