@@ -21,7 +21,7 @@ from jobboard.views import detail, job_listings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", home),
-    path("job_listings/<int:id>", detail),
-    path("job_listings", job_listings),
+    path("", home, name="home"),
+    path("job_listings/<int:id>", detail, name="detail"),
+    path("job_listings", job_listings, name="job_listings"),
 ]
