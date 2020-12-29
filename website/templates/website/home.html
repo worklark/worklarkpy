@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkLark</title>
-</head>
-
+{% extends 'base.html' %}
+{% block content %}
 <body>
     {{message}} Welcome to WorkLark. There are currently {{job_listing_count}} job listings available.
 </body>
-
-</html>
+{% endblock content %}
