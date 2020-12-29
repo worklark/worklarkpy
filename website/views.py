@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from jobboard.models import JobListing
+from job_board.models import JobListing
 
 
 def home(request):

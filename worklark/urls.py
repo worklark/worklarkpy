@@ -21,5 +21,5 @@ from website.views import home
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="home"),
-    path("job_board/", include("jobboard.urls")),
+    path("job_board/", include("job_board.urls")),
 ]

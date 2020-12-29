@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "website",
     "waitlist",
-    "jobboard",
+    "job_board",
 ]
 
 MIDDLEWARE = [
