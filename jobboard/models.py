@@ -4,10 +4,13 @@ from django.db import models
 class Employer(models.Model):
     """The employers that employees"""
 
-    name = models.CharField(max_length=254)
+    operating_name = models.CharField(max_length=200, null=False, blank=False)
+    registered_name = models.CharField(max_length=200)
+    shortname = models.CharField(max_length=200, null=False, blank=False, unique=True)
+    website = models.CharField(max_length=200, null=False, blank=False)
 
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.operating_name}"
 
 
 class JobListing(models.Model):
