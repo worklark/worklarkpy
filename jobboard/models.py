@@ -5,7 +5,7 @@ class Employer(models.Model):
     """The employers that employees"""
 
     operating_name = models.CharField(max_length=200, null=False, blank=False)
-    registered_name = models.CharField(max_length=200)
+    registered_name = models.CharField(max_length=200, default="")
     shortname = models.CharField(max_length=200, null=False, blank=False, unique=True)
     website = models.CharField(max_length=200, null=False, blank=False)
 
@@ -21,4 +21,4 @@ class JobListing(models.Model):
     employer = models.ForeignKey(Employer, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.title} @ {self.employer.name}"
+        return f"{self.title} @ {self.employer.operating_name}"

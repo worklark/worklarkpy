@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import job_listing, job_listings
+from .views import job_listing, job_listings, employer, employers
 
 urlpatterns = [
     path("job_listings/<int:id>", job_listing, name="job_listing"),
     path("job_listings/", job_listings, name="job_listings"),
+    path("employers/<int:id>", employer, name="employer"),
+    path("employers/", employers, name="employers"),
 ]
