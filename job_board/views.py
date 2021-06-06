@@ -50,5 +50,7 @@ def employer_new(request):
 
 
 def employers(request):
+    if not request.user.username == "admin":
+        return render(request, "job_board/404.html")
     employers = get_list_or_404(Employer)
     return render(request, "job_board/employers.html", {"employers": employers})

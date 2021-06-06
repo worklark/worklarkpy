@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Employer(models.Model):
-    """The employers that employees"""
+    """The employers that employ employees"""
 
     operating_name = models.CharField(max_length=200, null=False, blank=False)
     registered_name = models.CharField(max_length=200, default="")

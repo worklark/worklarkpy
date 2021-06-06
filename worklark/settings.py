@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "website",
     "waitlist",
     "job_board",
+    "authentication",
 ]
 
 MIDDLEWARE = [
