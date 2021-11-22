@@ -8,11 +8,12 @@ license = "AGPLv3"
 [tool.poetry.dependencies]
 python = "^3.9"
 Django = "^3.1.4"
-behave = "^1.2.6"
+psycopg2 = "^2.9.2"
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
 pylint = "^2.6.0"
+selenium = "^3.141.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
