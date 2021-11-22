@@ -79,10 +79,16 @@ WSGI_APPLICATION = "worklark.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'worklark',
+        'USER': 'worklark',
+        'PASSWORD': 'secretPassword',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
+
+AUTH_USER_MODEL = 'authentication.User'
 
 
 # Password validation
@@ -122,3 +128,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+LOGIN_REDIRECT_URL = '/'
