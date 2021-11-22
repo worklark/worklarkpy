@@ -31,16 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "website",
+    "waitlist",
+    "job_board",
+    # 'authentication' overrides the views in 'django.contrib.admin
+    # Ensure it is places higher in this list
+    "authentication",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "website",
-    "waitlist",
-    "job_board",
-    "authentication",
 ]
 
 MIDDLEWARE = [
