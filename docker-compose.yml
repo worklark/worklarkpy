@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  database:
+      image: postgres
+      environment:
+          POSTGRES_USER: worklark
+          POSTGRES_PASSWORD: secretPassword
+          POSTGRES_DB: worklark
+      ports:
+          - 5432:5432
+
